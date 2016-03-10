@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<title> Testanto Javascript</title>
+		<meta charset="utf-8">
+		<style rel="styleheet" type="text/css" media="all">
+			.Topo img{
+				max-width: 720px;			
+				max-height: 230px;
+				width: auto;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="Topo">
+			<img scr="Imagem1.jpg">
+		</div>
+	<script language="Javascript">
+		var banners = ["imagem1.jpg", "imagem2.jpg"];
+		var bannerAtual = 0;
+		function trocaBanner(){
+			bannerAtual = (bannerAtual + 1) % 2;
+			document.querySelector('.Topo img').src = banners[bannerAtual];
+		}
+		var time = setInterval(trocaBanner, 3000);
+		function pausaBanner(){
+			clearInterval(time);
+		}
+		function continuaBanner(){
+			setInterval(trocaBanner, 3000);
+		}		
+		</script>
+		<button type="button"
+			onclick="pausaBanner()">
+			Pausar</button>
+		<button type="button"
+			onclick="coninuaBanner()">
+			Play</button>
+	</body>
+</html>
