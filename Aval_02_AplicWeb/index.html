@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<title>Formulario de Inscricao</title>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "estilo.css" type = "text/css">
+		<script type = "text/javascript" src = "/home/alunos/Área de Trabalho/jquery-2.1.1.min.js"></script>
+		<script type = "text/javascript" src = "/home/alunos/Área de Trabalho/jquery.maskedinput.js"></script>
+	</head>
+	<body>
+		<h2>Formulário de Inscrição</h2>	
+		<hr></hr>
+		<br>
+		<form>
+			<label><b>Nome: </b></label>
+			<input type = "text" name = "nome" id = "nome"/>
+			<label id = "erro1">Nome incorreto</label>			
+			<br>
+			<label><strong>Data de Nascimento: </strong></label>
+			<input type = "text" name = "data" id = "data"/>
+			<label id = "erro2">Data incorreta</label>
+			<br>
+			<label><b>Email: </b></label>
+			<input type = "text" name = "email" id = "email"/>
+			<label id = "erro3">Email incorreto</label>			
+			<br>
+			<input type = "button" name = "butao1" value = "Limpar" id = "limpar"/><br>
+			<input type = "button" name = "butao2" value = "Enviar" id = "enviar"/><br> 
+		</form>
+		<script language = "Javascript">
+			$("#data").mask("99/99/9999");		
+			$(document).ready(function(){
+				$("#erro1").fadeOut(0);
+				$("#erro2").fadeOut(0);
+				$("#erro3").fadeOut(0);
+				document.querySelector("#nome").value = " ";
+				document.querySelector("#data").value = " ";
+				document.querySelector("#email").value = " ";
+			});	
+			$("#limpar").click(function(){
+				document.querySelector("#nome").value = " ";
+				$("#erro1").fadeOut(0);
+				document.querySelector("#email").value = " ";
+				$("#erro3").fadeOut(0);
+				document.querySelector("#data").value = " ";
+				$("#erro2").fadeOut(0);
+			});	
+			$("#enviar").click(function(){
+				var nome = false;
+				var data = false;
+				var email = false;
+	
+				//validacao NOME
+				var a = document.querySelector("#nome").value;
+				if (a.length < 10){	
+					$("#erro1").fadeIn(0);
+					nome = false;
+				}else{
+					$("#erro1").fadeOut(0);
+					nome = true;
+				}
+				//validacao EMAIL
+				var b = document.querySelector("#email").value;
+				var atpos = b.indexOf("@");
+				if(atpos < 0){
+					$("#erro3").fadeIn(0);
+					email = false;
+				}else{
+					$("#erro3").fadeOut(0);
+					email = true;
+				}
+				//validacao DATA
+				var c = document.querySelector("#data").value.split("/");
+				var dia = parseInt(c[0]);
+				var mes = parseInt(c[1]);
+				var ano = parseInt(c[2]);	
+	
+				if( mes <= 12 || mes >= 1){
+					if( (mes==01) || (mes==03) || (mes==05) || (mes==07) || (mes==08) || (mes==10) || (mes==12)){	
+						if(dia < 01 || dia > 31){
+							$("#erro2").fadeIn(0);
+							data = false;						
+						}else{
+							$("#erro2").fadeOut(0);
+							data = true;
+						}			
+					}else if((mes==04) || (mes==06) || (mes==9) || (mes==11)){	
+						if(dia < 01 || dia > 30){
+							$("#erro2").fadeIn(0);
+							data = false;						
+						}else{
+							$("#erro2").fadeOut(0);
+							data = true;
+						}			
+					}else if(mes == 2){
+						if((ano % 4 == 0) && (ano % 100 != 0)){							
+							if(dia < 01 || dia > 29){
+								$("#erro2").fadeIn(0);
+								data = false;
+							}else{
+								$("#erro2").fadeOut(0);
+								data = true;
+							}
+						}else if((ano % 4 == 0) && (ano % 100 == 0) && (ano % 400 == 0)){
+							if(dia < 01 || dia > 29){
+								$("#erro2").fadeIn(0);
+								data = false;
+							}else{
+								$("#erro2").fadeOut(0);
+								data = true;
+							}
+						}else{
+							if(dia < 01 || dia > 28){
+								$("#erro2").fadeIn(0);
+								data = false;
+							}else{
+								$("#erro2").fadeOut(0);
+								data = true;
+							}
+						}						
+					}else{
+						$("#erro2").fadeOut(0);
+						data = true;
+					}
+				}
+				if((mes < 01) || (mes > 12)){				
+					$("#erro2").fadeIn(0);
+					data = false;				
+				}
+
+				if((nome == true) && (email == true) && (data == true)){
+					alert("Gravados graças ao bom PAGODE com SUCESSO!!!");			
+				}
+			});	
+		</script>	
+	</body>
+</html>
