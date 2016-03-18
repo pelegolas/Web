@@ -1,0 +1,41 @@
+label{
+	font-size: 12px;
+}
+
+#erro1{
+	color: red;
+	position: relative;
+	left: 98px;
+}
+
+#erro2{
+	color: red;
+}
+
+#erro3{
+	color: red;
+	position: relative;
+	left: 98px;
+}
+
+#nome{
+	position: relative;
+	left: 98px;
+}
+
+#email{
+	position: relative;
+	left: 98px;
+}
+
+#limpar{
+	position: relative;
+	top: 10px;
+	left: 70px;
+}
+
+#enviar{
+	position: relative;
+	bottom: 15px;
+	left: 270px;
+}
