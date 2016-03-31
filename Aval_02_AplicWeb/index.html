@@ -74,10 +74,13 @@
 				var dia = parseInt(c[0]);
 				var mes = parseInt(c[1]);
 				var ano = parseInt(c[2]);	
-	
-				if( mes <= 12 || mes >= 1){
+				if(document.querySelector("#data").value == ' '){
+					$("#erro2").fadeIn(0);
+					data = false;
+				}
+				if( mes <= 12 || mes >= 1 && mes != 0){
 					if( (mes==01) || (mes==03) || (mes==05) || (mes==07) || (mes==08) || (mes==10) || (mes==12)){	
-						if(dia < 01 || dia > 31){
+						if(dia < 01 || dia > 31 && dia != 0){
 							$("#erro2").fadeIn(0);
 							data = false;						
 						}else{
@@ -85,7 +88,7 @@
 							data = true;
 						}			
 					}else if((mes==04) || (mes==06) || (mes==9) || (mes==11)){	
-						if(dia < 01 || dia > 30){
+						if(dia < 01 || dia > 30 && dia != 0){
 							$("#erro2").fadeIn(0);
 							data = false;						
 						}else{
@@ -94,7 +97,7 @@
 						}			
 					}else if(mes == 2){
 						if((ano % 4 == 0) && (ano % 100 != 0)){							
-							if(dia < 01 || dia > 29){
+							if(dia < 01 || dia > 29 && dia != 0){
 								$("#erro2").fadeIn(0);
 								data = false;
 							}else{
@@ -102,7 +105,7 @@
 								data = true;
 							}
 						}else if((ano % 4 == 0) && (ano % 100 == 0) && (ano % 400 == 0)){
-							if(dia < 01 || dia > 29){
+							if(dia < 01 || dia > 29 && dia != 0){
 								$("#erro2").fadeIn(0);
 								data = false;
 							}else{
@@ -110,7 +113,7 @@
 								data = true;
 							}
 						}else{
-							if(dia < 01 || dia > 28){
+							if(dia < 01 || dia > 28 && dia != 0){
 								$("#erro2").fadeIn(0);
 								data = false;
 							}else{
@@ -123,11 +126,10 @@
 						data = true;
 					}
 				}
-				if((mes < 01) || (mes > 12)){				
+				if((mes < 01) || (mes > 12) && mes != 0){				
 					$("#erro2").fadeIn(0);
 					data = false;				
 				}
-
 				if((nome == true) && (email == true) && (data == true)){
 					alert("Gravados graças ao bom PAGODE com SUCESSO!!!");			
 				}
