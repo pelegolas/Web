@@ -74,7 +74,7 @@
 				var dia = parseInt(c[0]);
 				var mes = parseInt(c[1]);
 				var ano = parseInt(c[2]);	
-				if(document.querySelector("#data").value == ' '){
+				if(document.querySelector("#data").value == ' ' || document.querySelector("#data").value == ''){
 					$("#erro2").fadeIn(0);
 					data = false;
 				}
@@ -121,15 +121,13 @@
 								data = true;
 							}
 						}						
-					}else{
-						$("#erro2").fadeOut(0);
-						data = true;
 					}
 				}
-				if((mes < 01) || (mes > 12) && mes != 0){				
+				if((mes < 01) || (mes > 12)){				
 					$("#erro2").fadeIn(0);
 					data = false;				
 				}
+				
 				if((nome == true) && (email == true) && (data == true)){
 					alert("Gravados graças ao bom PAGODE com SUCESSO!!!");			
 				}
