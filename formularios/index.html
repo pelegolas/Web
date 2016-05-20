@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+ 		<meta charset="utf-8" />
+ 		<title>Titulo da pagina</title>
+		<script type = "text/javascript" src = "jquery-2.1.1.min.js"></script>
+		<script type = "text/javascript" src = "jquery.maskedinput.js"></script> 	
+ 	</head>
+	<body>	
+		<form method="post" name="formCadastro"
+		action="cadCliente.php">
+		<h1>Cadastro de Clientes</h1>
+		<table width="100%">
+		<tr>
+			<th width="10%">Nome</th>
+			<td width="82%"><input type="text" name="txtNome"></td>
+		</tr>
+		<tr>
+			<th>CPF</th>
+			<td><input type="text" name="txtCPF" maxlength="14" id="CPF"></td>		
+		</tr>		
+		<tr>
+			<th>Endereço</th>
+			<td><textarea name="txtEndereco" cols="30" rows="4"></textarea></td>		
+		</tr>
+		<tr>
+			<th>Estado</th>
+			<td>
+				<select name="listEstados">	
+					<option value="BA">Bahia</option>	
+					<option value="ES">Espirito Santo</option>	
+					<option value="MG">Minas Gerais</option>	
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="SP">São Paulo</option>	
+				</select>		
+			</td>		
+		</tr>
+		<tr>
+			<th>Data de Nascimento</th>
+			<td><input type="text" name="txtData" id="dtNasc"></td>	
+		</tr>
+		<tr>
+			<th>Sexo</th>
+			<td>			
+				<input type="radio" name="sexo" value="M" checked>Masculino
+				<br>
+				<input type="radio" name="sexo" value="F" />Feminino
+			</td>
+		</tr>
+		<tr>
+			<th>Areas de Interesse</th>
+			<td>
+				<input type="checkbox" name="checkCinema" value="true"/>Cinema<br>
+				<input type="checkbox" name="checkMusica" value="true"/>Musica<br>
+				<input type="checkbox" name="checkInfo" value="true"/>Informática<br>			
+			</td>		
+		</tr>
+		<tr>
+			<th>Login</th>		
+			<td><input type="text" name="txtLogin"></td>
+		</tr>
+		<tr>
+			<th>Senha</th>		
+			<td><input type="password" name="txtSenha1"></td>
+		</tr>
+		<tr>
+			<th>Confimação Senha</th>		
+			<td><input type="password" name="txtSenha2"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="btnEnviar" value="Enviar"></td>
+			<td><input type="reset" name="btnLimpar" value="Limpar"></td>				
+		</tr>
+		</table>
+		<script language = "JavaScript" type="text/javascript">
+			$("#dtNasc").mask("99/99/9999");	
+			$("#CPF").mask("999.999.999-99");		
+		</script>	
+		</form>
+	</body>
+</html>
