@@ -1,0 +1,139 @@
+body{
+	background: #B0E2FF;
+}
+
+img{
+	position: absolute;
+	top: 10px;
+	left: 12px;
+}
+
+.topo li{
+	display: inline;
+	padding: 20px;
+}
+
+.menu{
+	background: #FF9900;
+	width: 1545px;
+	height: 66px;
+	box-shadow: 1px 1px 3px;
+	-moz-box-shadow: 1px 1px 3px;
+	border-radius: 2px;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	top: -15px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	font-family: helvetica; 
+}
+
+.menu li a{
+	width: 55px;
+	height: 15px;
+	padding: 20px 100px;
+	float: left;
+}
+
+.rodape{
+	background-color: #FF9900;
+	position: absolute;
+	bottom: 5px;
+	width: 1586px;
+	height: 66px;
+	box-shadow: 1px 1px 3px;
+	-moz-box-shadow: 1px 1px 3px;
+	border-radius: 2px;
+	color: white;
+}
+
+#rod1{
+	color: white;
+	font-size: 10px;
+	font-family: helvetica;
+	position: absolute;
+	left: 650px;
+}
+
+#rod2{
+	color: white;
+	font-size: 10px;
+	font-family: helvetica;
+	position: absolute;
+	bottom: 10px;
+	left: 430px;
+}
+
+#sobre{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 27px;
+	font-size: 20px;
+	color: black; 
+}
+
+#sobre1{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 25px;
+	font-size: 20px;
+	color: orange; 
+}
+
+#sobre2{
+	font-family: helvetica;
+	position: absolute;
+	top: 120px;	
+	left: 25px;
+	width: 1550px;
+}
+
+#home{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 27px;
+	font-size: 20px;
+	color: black;
+}
+
+#home1{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 25px;
+	font-size: 20px;
+	color: orange; 
+}
+
+#home2{
+	font-family: helvetica;
+	position: absolute;
+	top: 120px;	
+	left: 25px;
+	width: 1550px;
+}
+
+#cliente{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 27px;
+	font-size: 20px;
+	color: black;
+}
+
+#cliente1{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 25px;
+	font-size: 20px;
+	color: orange;
+}
