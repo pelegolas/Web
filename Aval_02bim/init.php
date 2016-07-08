@@ -1,4 +1,3 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
 	//inclui o arquivo de funções
 	require_once 'funcoes.php';

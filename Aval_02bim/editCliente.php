@@ -1,20 +1,20 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
 	require_once 'init.php';
 	include_once 'clientes.class.php';
 $dadosOK = true;
-//Pega os Dados do Formulário
+//pega os dados  do formulário
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 $name = isset($_POST['txtNome']) ? $_POST['txtNome'] : null;
 $dataCadastro = isset($_POST['txtData']) ? $_POST['txtData'] : null;	
 $email = isset($_POST['txtEmail']) ? $_POST['txtEmail'] : null;
-//Validar Email
+	
+//validação email
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
    echo "Email Invalido";
 }
-//Novo objeto Clientes
+//instancia objeto  clientes
 $clientes = new Clientes($name ,$dataCadastro ,$email);
-//BD Update
+//atualiza o BD
 $PDO = db_connect();
 $sql ="UPDATE  clientes  SET nomeCliente = :name,  dataCadastro = :dataCadastro, email = :email WHERE  idCliente = :id";
 $stmt = $PDO ->prepare($sql);
@@ -29,7 +29,7 @@ header('Location: cliente.php');
 }
 else
 {
-echo"Erro Ao Modificar!";
+echo"Erro ao  alterar";
 print_r($stmt ->errorInfo());
 }
 ?>

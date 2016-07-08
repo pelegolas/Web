@@ -1,4 +1,3 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
  	class Fornecedores{
 		private $nomeFornecedor;

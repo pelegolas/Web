@@ -1,23 +1,22 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
 	require_once 'init.php';
 	include_once 'fornecedores.class.php';
 	$dadosOK=true;
-	//Recebe os Dados do Formulário
+	//pega os dados do formulário
 	
 	$name = isset($_POST['txtNome']) ? $_POST['txtNome'] : null;
 	$dataFundacao = isset($_POST['txtData']) ? $_POST['txtData'] : null;
 	$email = isset($_POST['txtEmail']) ? $_POST['txtEmail'] : null;
 	
-	//Validar Email
+	//validação email
 	if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "Email Invalido";
 	}
 	
-	//Novo objeto Fornecedores
+	//instancia objeto fornecedores
 	$fornecedores = new Fornecedores($name,$dataFundacao,$email);
 
-	//insere dentro do banco
+	// insere no BD
 	$PDO = db_connect();
 	$sql = "INSERT INTO fornecedores(nomeFornecedor, dataFundacao, email ) VALUES (:name, :dataFundacao,:email)";
 	$stmt = $PDO->prepare($sql);
@@ -31,7 +30,7 @@
 	}
 	else
 	{
-		echo "Erro no cadastro!";
+		echo "Erro ao cadastrar!!";
 		print_r($stmt->errorInfo());
 	}
 ?>

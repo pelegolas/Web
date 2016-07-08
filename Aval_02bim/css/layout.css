@@ -1,57 +1,206 @@
-<!--Edgard Alexandre e Pedro Barbosa-->
 body{
-	background: #B0E2FF;
+background:#FFF;
+font-family:Tahoma,arial,verdana;
+font-size:13px;
+color:#000;
+margin:0;
+padding:0;
 }
 
-img{
-	position: fixed;
-	top: 5px;
-	left: 12px;
+.tudo {
+width:100% ;
+height: auto;
+margin:10px auto;
+padding:0;
 }
 
-.topo li{
-	display: inline;
-	padding: 20px;
+.topo {
+background:#FFF;
+width:100px;
+height:100px;
+margin:0;
 }
 
-.menu{
-	background: #FF9900;
-	width: 100%;
-	height: 66px;
-	box-shadow: 1px 1px 3px;
-	-moz-box-shadow: 1px 1px 3px;
-	border-radius: 2px;
-	font-size: 20px;
-	color: white;
-	position: fixed;
-	top: -20px;
-	left: -10px;
+.imgTopo{
+float:left;
+top:5px;
+left:10px;
 }
 
-a{
-	text-decoration: none;
-	color: white;
-	font-family: helvetica; 
+.imgTopo img{
+max-width:150px;
+max-height:100px;
+width:auto;
+height:auto;
+position: absolute;
+left: 20px;
+top: 23px;
 }
 
-.menu li a{
-	width: 55px;
-	height: 15px;
-	padding: 20px 120px;
-	float: left;
+.nomes{
+color: white;
+font-family: helvetica;
+font-size: 15px;
+position: absolute;
+top: 75px;
+right: 40px;
+}
+
+.menuTopo nav ul{
+background:#FF9900;
+background:linear-gradient( top , #FF9900 0% , orange 100%);
+background:-moz-linear-gradient(top, #FF9900 0%, orange100%);
+background:-webkit-linear-gradient(top, #FF9900 0%, orange 100%);
+box-shadow:0px 0px 9px rgba (0 , 0 , 0 , 0.15);
+padding:0 200px;
+list-style:none;
+display:inline-table;
+width: 1185px;
+height: 80px; 
+position:absolute;
+top: -13px;
+}
+
+.menuTopo nav ul:after{
+content:"";
+clear:both;
+display:block;
+}
+
+.menuTopo nav ul li{
+float:left;
+}
+
+.menuTopo nav ul li:hover{
+background:#4b545f;
+background:linear-gradient( top , #4 f5964 0% , #5 f6975 40%);
+background:-moz-linear-gradient( top , #4 f5964 0% , #5 f6975 40%);
+background:-webkit-linear-gradient( top , #4 f5964 0% , #5 f6975 40%);
+}
+
+.menuTopo nav ul li:hover a{
+color:#fff;
+}
+
+.menuTopo nav ul li a{
+display:block;
+padding:40px 40px;
+color:#757575;
+text-decoration:none;
+text-decoration: none;
+color: white;
+font-family: helvetica;
+font-size: 20px;
+}
+
+.idBlog img{
+max-width:1000px;
+max-height:110px;
+margin-left: 390px;
+width:auto;
+height:auto;
+}
+
+.idBlog p{
+text-align:right;
+}
+
+.conteudo{
+width:1000px;
+margin-left:20px;
+}
+
+
+.conteudo img {
+max-width:1000px;
+max-height:1000px;
+width:auto;
+height:auto;
+margin-left: 150px;
+}
+
+.conteudo p{
+text-align:justify;
 }
 
 .rodape{
-	background-color: #FF9900;
-	width: 120%;
-	position: fixed;
-	left: -10px;
-	bottom: 0px;
-	height: 66px;
-	box-shadow: 1px 1px 3px;
-	-moz-box-shadow: 1px 1px 3px;
-	border-radius: 2px;
-	color: white;
+float:left;
+padding:10px;
+text-align:center;
+position: absolute;
+bottom: -200px;
+background-color: #FF9900; 
+width: 100%;
+height: 50px; 
+}
+
+#conteudo img{
+	position:relative;
+	max-width:25px;
+	max-height:15px;
+	width:auto;
+	height:auto;
+	right: 150px;
+}
+
+#home{
+	font-family: helvetica;
+	position: absolute;
+	top: 100px;	
+	left: 27px;
+	font-size: 20px;
+	color: #FF9900;
+}
+
+#home1{
+	font-family: helvetica;
+	position: absolute;
+	top: 100px;	
+	left: 25px;
+	font-size: 20px;
+	color: black; 
+}
+
+#home2{
+	font-family: helvetica;
+	position: absolute;
+	top: 150px;	
+	left: 25px;
+	width: 1500px;
+}
+
+#home3{
+	font-family: helvetica;
+	position: absolute;
+	top: 480px;	
+	left: 25px;
+	width: 1500px;
+}
+
+#sobre{
+	font-family: helvetica;
+	position: absolute;
+	top: 100px;	
+	left: 27px;
+	font-size: 20px;
+	color: #FF9900;
+}
+
+#sobre1{
+	font-family: helvetica;
+	position: absolute;
+	top: 70px;	
+	left: 25px;
+	font-size: 20px;
+	color: #FF9900; 
+}
+
+#sobre2{
+	font-family: helvetica;
+	position: absolute;
+	top: 150px;	
+	left: 25px;
+	width: 1500px;
 }
 
 #rod1{
@@ -71,119 +220,9 @@ a{
 	left: 440px;
 }
 
-#sobre{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 27px;
-	font-size: 20px;
-	color: black; 
-}
-
-#sobre1{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 25px;
-	font-size: 20px;
-	color: #FF9900; 
-}
-
-#sobre2{
-	font-family: helvetica;
-	position: absolute;
-	top: 120px;	
-	left: 25px;
-	width: 1550px;
-}
-
-#home{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 27px;
-	font-size: 20px;
-	color: black;
-}
-
-#home1{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 25px;
-	font-size: 20px;
-	color: #FF9900; 
-}
-
-#home2{
-	font-family: helvetica;
-	position: absolute;
-	top: 120px;	
-	left: 25px;
-	width: 1550px;
-}
-
-#cliente{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 27px;
-	font-size: 20px;
-	color: black;
-}
-
-#cliente1{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 25px;
+#ldC{
 	font-size: 20px;
 	color: #FF9900;
-}
-
-.tabelaClientes{
-	position: absolute;
-	top: 150px;
-}
-
-.tabela{
-	position: absolute;
-	top: 120px;
-	border-color: black;
-	background-color: #FF9900;
-}
-
-.n{
-	color: white; 
 	font-family: helvetica;
 }
 
-.sla{
-	position: absolute;
-	top: 75px;
-	left: 1150px;
-}
-
-.sla a{
-	text-decoration: none;
-	color: black;
-	font-family: helvetica;
-}
-
-.ldC{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 27px;
-	font-size: 20px;
-	color: black;
-}
-
-.ldC2{
-	font-family: helvetica;
-	position: absolute;
-	top: 70px;	
-	left: 25px;
-	font-size: 20px;
-	color: #FF9900;
-}

@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de Dados: `wasd`
+-- Base de Dados: `WEB`
 --
-CREATE DATABASE IF NOT EXISTS `wasd` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `wasd`;
+CREATE DATABASE IF NOT EXISTS `WEB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `WEB`;
 
 -- --------------------------------------------------------
 

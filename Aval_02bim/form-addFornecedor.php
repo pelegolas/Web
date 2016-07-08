@@ -1,8 +1,16 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
 	require 'init.php';
 ?>
 <!DOCTYPE html>
+<html>
+<head>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/datepicker-pt-BR.js"></script>
+</head>
+<body>
 	<div class="conteudo" id="conteudo">
 		<form method="post" name="formCadastro" action="addFornecedor.php" enctype="multipart/form-data" onSubmit="return verifica()">
 			<h1>Cadastro de Fornecedor</h1>

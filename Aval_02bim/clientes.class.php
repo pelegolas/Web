@@ -1,4 +1,3 @@
-<!--Pedro Barbosa e Edgard Alexandre-->
 <?php
  	class Clientes{
 		private $nomeCliente;
